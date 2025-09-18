@@ -1,0 +1,230 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use App\Models\Instansi;
+
+class InstansiSeeder extends Seeder
+{
+    public function run(): void
+    {
+        Instansi::truncate();
+
+        // Kementerian
+        Instansi::create([
+            'kategori' => 'Kementerian',
+            'instansi' => 'Kementerian A',
+            'proses_bisnis_as_is' => 10,
+            'layanan_as_is' => 12,
+            'data_info_as_is' => 25,
+            'aplikasi_as_is' => 3,
+            'infra_as_is' => 4,
+            'keamanan_as_is' => 2,
+            'proses_bisnis_to_be' => 3,
+            'layanan_to_be' => 0,
+            'data_info_to_be' => 0,
+            'aplikasi_to_be' => 2,
+            'infra_to_be' => 0,
+            'keamanan_to_be' => 0,
+            'peta_rencana' => false,
+        ]);
+        Instansi::create([
+            'kategori' => 'Kementerian',
+            'instansi' => 'Kementerian B',
+            'proses_bisnis_as_is' => 0,
+            'layanan_as_is' => 0,
+            'data_info_as_is' => 0,
+            'aplikasi_as_is' => 0,
+            'infra_as_is' => 0,
+            'keamanan_as_is' => 0,
+            'proses_bisnis_to_be' => 0,
+            'layanan_to_be' => 0,
+            'data_info_to_be' => 0,
+            'aplikasi_to_be' => 0,
+            'infra_to_be' => 0,
+            'keamanan_to_be' => 0,
+            'peta_rencana' => false,
+        ]);
+
+        // LPNK
+        Instansi::create([
+            'kategori' => 'LPNK',
+            'instansi' => 'LPNK A',
+            'proses_bisnis_as_is' => 5,
+            'layanan_as_is' => 7,
+            'data_info_as_is' => 10,
+            'aplikasi_as_is' => 2,
+            'infra_as_is' => 1,
+            'keamanan_as_is' => 1,
+            'proses_bisnis_to_be' => 2,
+            'layanan_to_be' => 1,
+            'data_info_to_be' => 3,
+            'aplikasi_to_be' => 1,
+            'infra_to_be' => 1,
+            'keamanan_to_be' => 0,
+            'peta_rencana' => true,
+        ]);
+        Instansi::create([
+            'kategori' => 'LPNK',
+            'instansi' => 'LPNK B',
+            'proses_bisnis_as_is' => 8,
+            'layanan_as_is' => 6,
+            'data_info_as_is' => 12,
+            'aplikasi_as_is' => 4,
+            'infra_as_is' => 3,
+            'keamanan_as_is' => 2,
+            'proses_bisnis_to_be' => 4,
+            'layanan_to_be' => 3,
+            'data_info_to_be' => 5,
+            'aplikasi_to_be' => 2,
+            'infra_to_be' => 2,
+            'keamanan_to_be' => 1,
+            'peta_rencana' => true,
+        ]);
+
+        // LNS
+        Instansi::create([
+            'kategori' => 'LNS',
+            'instansi' => 'LNS A',
+            'proses_bisnis_as_is' => 6,
+            'layanan_as_is' => 4,
+            'data_info_as_is' => 9,
+            'aplikasi_as_is' => 3,
+            'infra_as_is' => 2,
+            'keamanan_as_is' => 1,
+            'proses_bisnis_to_be' => 2,
+            'layanan_to_be' => 2,
+            'data_info_to_be' => 3,
+            'aplikasi_to_be' => 1,
+            'infra_to_be' => 1,
+            'keamanan_to_be' => 1,
+            'peta_rencana' => false,
+        ]);
+        Instansi::create([
+            'kategori' => 'LNS',
+            'instansi' => 'LNS B',
+            'proses_bisnis_as_is' => 4,
+            'layanan_as_is' => 2,
+            'data_info_as_is' => 7,
+            'aplikasi_as_is' => 2,
+            'infra_as_is' => 1,
+            'keamanan_as_is' => 0,
+            'proses_bisnis_to_be' => 1,
+            'layanan_to_be' => 1,
+            'data_info_to_be' => 2,
+            'aplikasi_to_be' => 1,
+            'infra_to_be' => 0,
+            'keamanan_to_be' => 0,
+            'peta_rencana' => true,
+        ]);
+
+        // Instansi Lain
+        Instansi::create([
+            'kategori' => 'Instansi Lain',
+            'instansi' => 'Instansi Lain A',
+            'proses_bisnis_as_is' => 3,
+            'layanan_as_is' => 2,
+            'data_info_as_is' => 5,
+            'aplikasi_as_is' => 1,
+            'infra_as_is' => 1,
+            'keamanan_as_is' => 1,
+            'proses_bisnis_to_be' => 2,
+            'layanan_to_be' => 1,
+            'data_info_to_be' => 2,
+            'aplikasi_to_be' => 1,
+            'infra_to_be' => 1,
+            'keamanan_to_be' => 1,
+            'peta_rencana' => false,
+        ]);
+        Instansi::create([
+            'kategori' => 'Instansi Lain',
+            'instansi' => 'Instansi Lain B',
+            'proses_bisnis_as_is' => 7,
+            'layanan_as_is' => 5,
+            'data_info_as_is' => 11,
+            'aplikasi_as_is' => 3,
+            'infra_as_is' => 2,
+            'keamanan_as_is' => 2,
+            'proses_bisnis_to_be' => 3,
+            'layanan_to_be' => 2,
+            'data_info_to_be' => 4,
+            'aplikasi_to_be' => 1,
+            'infra_to_be' => 1,
+            'keamanan_to_be' => 1,
+            'peta_rencana' => true,
+        ]);
+
+        // Provinsi
+        Instansi::create([
+            'kategori' => 'Provinsi',
+            'instansi' => 'Provinsi A',
+            'proses_bisnis_as_is' => 9,
+            'layanan_as_is' => 8,
+            'data_info_as_is' => 15,
+            'aplikasi_as_is' => 4,
+            'infra_as_is' => 3,
+            'keamanan_as_is' => 2,
+            'proses_bisnis_to_be' => 4,
+            'layanan_to_be' => 2,
+            'data_info_to_be' => 5,
+            'aplikasi_to_be' => 2,
+            'infra_to_be' => 1,
+            'keamanan_to_be' => 1,
+            'peta_rencana' => true,
+        ]);
+        Instansi::create([
+            'kategori' => 'Provinsi',
+            'instansi' => 'Provinsi B',
+            'proses_bisnis_as_is' => 2,
+            'layanan_as_is' => 3,
+            'data_info_as_is' => 6,
+            'aplikasi_as_is' => 2,
+            'infra_as_is' => 1,
+            'keamanan_as_is' => 1,
+            'proses_bisnis_to_be' => 1,
+            'layanan_to_be' => 1,
+            'data_info_to_be' => 2,
+            'aplikasi_to_be' => 1,
+            'infra_to_be' => 1,
+            'keamanan_to_be' => 0,
+            'peta_rencana' => false,
+        ]);
+
+        // Kab/Kota
+        Instansi::create([
+            'kategori' => 'Kab/Kota',
+            'instansi' => 'Kabupaten/Kota A',
+            'proses_bisnis_as_is' => 6,
+            'layanan_as_is' => 4,
+            'data_info_as_is' => 8,
+            'aplikasi_as_is' => 2,
+            'infra_as_is' => 1,
+            'keamanan_as_is' => 1,
+            'proses_bisnis_to_be' => 2,
+            'layanan_to_be' => 2,
+            'data_info_to_be' => 3,
+            'aplikasi_to_be' => 1,
+            'infra_to_be' => 1,
+            'keamanan_to_be' => 1,
+            'peta_rencana' => true,
+        ]);
+        Instansi::create([
+            'kategori' => 'Kab/Kota',
+            'instansi' => 'Kabupaten/Kota B',
+            'proses_bisnis_as_is' => 4,
+            'layanan_as_is' => 2,
+            'data_info_as_is' => 7,
+            'aplikasi_as_is' => 1,
+            'infra_as_is' => 1,
+            'keamanan_as_is' => 0,
+            'proses_bisnis_to_be' => 1,
+            'layanan_to_be' => 1,
+            'data_info_to_be' => 2,
+            'aplikasi_to_be' => 1,
+            'infra_to_be' => 1,
+            'keamanan_to_be' => 0,
+            'peta_rencana' => false,
+        ]);
+    }
+}
