@@ -10,10 +10,10 @@
     <!-- Navbar -->
     <nav class="bg-white shadow mb-6">
         <div class="max-w-7xl mx-auto px-4 flex space-x-4">
-            @foreach (['Kementerian','LPNK','LNS','Instansi Lain','Provinsi','Kab/Kota'] as $nav)
+            @foreach (['Kementerian','LPNK','LNS','InstansiLain','Provinsi','KabKota'] as $nav)
                 <a href="{{ route('index', ['kategori' => $nav]) }}"
-                   class="py-3 px-4 {{ $kategori==$nav ? 'border-b-2 border-blue-600 font-semibold text-blue-600' : 'text-gray-600 hover:text-blue-600' }}">
-                    {{ $nav }}
+                class="py-3 px-4 {{ $kategori==$nav ? 'border-b-2 border-blue-600 font-semibold text-blue-600' : 'text-gray-600 hover:text-blue-600' }}">
+                {{ $nav == 'InstansiLain' ? 'Instansi Lain' : ($nav == 'KabKota' ? 'Kab/Kota' : $nav) }}
                 </a>
             @endforeach
         </div>
@@ -38,6 +38,9 @@
                         <th colspan="6" class="px-4 py-2">Arsitektur As-Is</th>
                         <th colspan="6" class="px-4 py-2">Arsitektur To-Be</th>
                         <th rowspan="2" class="px-4 py-2">Peta Rencana</th>
+                        <th rowspan="2" class="px-4 py-2">Clearance</th>
+                        <th rowspan="2" class="px-4 py-2">Reviu dan Evaluasi</th>
+                        <th rowspan="2" class="px-4 py-2">Tingkat Kematangan</th>
                         <th rowspan="2" class="px-4 py-2">Aksi</th>
                     </tr>
                     <tr class="bg-gray-50">
@@ -67,6 +70,9 @@
                         <td>{{ $row->keamanan_to_be }}</td>
 
                         <td>{{ $row->peta_rencana ? '✓' : '-' }}</td>
+                        <td>{{ $row->clearance ? '✓' : '-' }}</td>
+                        <td>{{ $row->reviueval ? '✓' : '-' }}</td>
+                        <td>{{ $row->tingkat_kematangan ? '✓' : '-' }}</td>
                         <td>
                             <button
                                 data-id="{{ $row->id }}"
@@ -122,6 +128,9 @@
                     <td>${row.keamanan_to_be ?? ''}</td>
 
                     <td>${row.peta_rencana ? '✓' : '-'}</td>
+                    <td>${row.clearance ? '✓' : '-'}</td>
+                    <td>${row.reviueval ? '✓' : '-'}</td>
+                    <td>${row.tingkat_kematangan ? '✓' : '-'}</td>
                     <td>
                         <button data-id="${row.id}"
                             class="refresh-btn bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">

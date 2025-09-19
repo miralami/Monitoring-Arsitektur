@@ -15,9 +15,21 @@ class InstansiController extends Controller
         return view('index', compact('data', 'kategori'));
     }
 
+    // InstansiController
     public function data($kategori)
     {
-        $data = Instansi::where('kategori', $kategori)->paginate(10);
+        $map = [
+            'Kementerian' => 'Kementerian',
+            'LPNK' => 'LPNK',
+            'LNS' => 'LNS',
+            'InstansiLain' => 'Instansi Lain',
+            'Provinsi' => 'Provinsi',
+            'KabKota' => 'Kab/Kota',
+        ];
+
+        $kategoriAsli = $map[$kategori] ?? $kategori;
+
+        $data = Instansi::where('kategori', $kategoriAsli)->paginate(10);
         return response()->json($data);
     }
 

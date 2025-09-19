@@ -31,6 +31,9 @@ return new class extends Migration
             $table->integer('keamanan_to_be')->default(0);
 
             $table->boolean('peta_rencana')->default(false);
+            $table->boolean('clearance')->default(false);
+            $table->boolean('reviueval')->default(false);
+            $table->boolean('tingkat_kematangan')->default(false);
 
             $table->timestamps();
         });

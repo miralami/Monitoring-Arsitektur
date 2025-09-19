@@ -28,6 +28,9 @@ class InstansiSeeder extends Seeder
             'infra_to_be' => 0,
             'keamanan_to_be' => 0,
             'peta_rencana' => false,
+            'clearance' => false,
+            'reviueval' => false,
+            'tingkat_kematangan' => false,
         ]);
         Instansi::create([
             'kategori' => 'Kementerian',
@@ -45,6 +48,9 @@ class InstansiSeeder extends Seeder
             'infra_to_be' => 0,
             'keamanan_to_be' => 0,
             'peta_rencana' => false,
+            'clearance' => false,
+            'reviueval' => false,
+            'tingkat_kematangan' => false,
         ]);
 
         // LPNK
@@ -63,7 +69,9 @@ class InstansiSeeder extends Seeder
             'aplikasi_to_be' => 1,
             'infra_to_be' => 1,
             'keamanan_to_be' => 0,
-            'peta_rencana' => true,
+            'clearance' => false,
+            'reviueval' => true,
+            'tingkat_kematangan' => false,
         ]);
         Instansi::create([
             'kategori' => 'LPNK',
@@ -80,7 +88,9 @@ class InstansiSeeder extends Seeder
             'aplikasi_to_be' => 2,
             'infra_to_be' => 2,
             'keamanan_to_be' => 1,
-            'peta_rencana' => true,
+            'clearance' => false,
+            'reviueval' => true,
+            'tingkat_kematangan' => false,
         ]);
 
         // LNS
@@ -100,6 +110,9 @@ class InstansiSeeder extends Seeder
             'infra_to_be' => 1,
             'keamanan_to_be' => 1,
             'peta_rencana' => false,
+            'clearance' => false,
+            'reviueval' => false,
+            'tingkat_kematangan' => false,
         ]);
         Instansi::create([
             'kategori' => 'LNS',
@@ -116,7 +129,9 @@ class InstansiSeeder extends Seeder
             'aplikasi_to_be' => 1,
             'infra_to_be' => 0,
             'keamanan_to_be' => 0,
-            'peta_rencana' => true,
+            'clearance' => false,
+            'reviueval' => true,
+            'tingkat_kematangan' => false,
         ]);
 
         // Instansi Lain
@@ -136,6 +151,9 @@ class InstansiSeeder extends Seeder
             'infra_to_be' => 1,
             'keamanan_to_be' => 1,
             'peta_rencana' => false,
+            'clearance' => false,
+            'reviueval' => false,
+            'tingkat_kematangan' => false,
         ]);
         Instansi::create([
             'kategori' => 'Instansi Lain',
@@ -152,7 +170,9 @@ class InstansiSeeder extends Seeder
             'aplikasi_to_be' => 1,
             'infra_to_be' => 1,
             'keamanan_to_be' => 1,
-            'peta_rencana' => true,
+            'clearance' => false,
+            'reviueval' => true,
+            'tingkat_kematangan' => false,
         ]);
 
         // Provinsi
@@ -171,7 +191,9 @@ class InstansiSeeder extends Seeder
             'aplikasi_to_be' => 2,
             'infra_to_be' => 1,
             'keamanan_to_be' => 1,
-            'peta_rencana' => true,
+            'clearance' => false,
+            'reviueval' => true,
+            'tingkat_kematangan' => false,
         ]);
         Instansi::create([
             'kategori' => 'Provinsi',
@@ -189,6 +211,9 @@ class InstansiSeeder extends Seeder
             'infra_to_be' => 1,
             'keamanan_to_be' => 0,
             'peta_rencana' => false,
+            'clearance' => false,
+            'reviueval' => false,
+            'tingkat_kematangan' => false,
         ]);
 
         // Kab/Kota
@@ -201,23 +226,6 @@ class InstansiSeeder extends Seeder
             'aplikasi_as_is' => 2,
             'infra_as_is' => 1,
             'keamanan_as_is' => 1,
-            'proses_bisnis_to_be' => 2,
-            'layanan_to_be' => 2,
-            'data_info_to_be' => 3,
-            'aplikasi_to_be' => 1,
-            'infra_to_be' => 1,
-            'keamanan_to_be' => 1,
-            'peta_rencana' => true,
-        ]);
-        Instansi::create([
-            'kategori' => 'Kab/Kota',
-            'instansi' => 'Kabupaten/Kota B',
-            'proses_bisnis_as_is' => 4,
-            'layanan_as_is' => 2,
-            'data_info_as_is' => 7,
-            'aplikasi_as_is' => 1,
-            'infra_as_is' => 1,
-            'keamanan_as_is' => 0,
             'proses_bisnis_to_be' => 1,
             'layanan_to_be' => 1,
             'data_info_to_be' => 2,
@@ -225,6 +233,29 @@ class InstansiSeeder extends Seeder
             'infra_to_be' => 1,
             'keamanan_to_be' => 0,
             'peta_rencana' => false,
+            'clearance' => false,
+            'reviueval' => false,
+            'tingkat_kematangan' => false,
+        ]);
+        Instansi::create([
+            'kategori' => 'Kab/Kota',
+            'instansi' => 'Kabupaten/Kota B',
+            'proses_bisnis_as_is' => 4,
+            'layanan_as_is' => 2,
+            'data_info_as_is' => 10,
+            'aplikasi_as_is' => 7,
+            'infra_as_is' => 2,
+            'keamanan_as_is' => 1,
+            'proses_bisnis_to_be' => 3,
+            'layanan_to_be' => 1,
+            'data_info_to_be' => 2,
+            'aplikasi_to_be' => 1,
+            'infra_to_be' => 1,
+            'keamanan_to_be' => 0,
+            'peta_rencana' => true,
+            'clearance' => false,
+            'reviueval' => false,
+            'tingkat_kematangan' => false,
         ]);
     }
 }
