@@ -11,6 +11,7 @@ class InstansiController extends Controller
     public function index(Request $request)
     {
         $kategori = $request->get('kategori', 'default'); // bisa ambil dari query/nav
+        $kategori = $kategori=='default' ? 'Kementerian' : $kategori;
         $data = Instansi::where('kategori', $kategori)->paginate(10);
         return view('index', compact('data', 'kategori'));
     }
