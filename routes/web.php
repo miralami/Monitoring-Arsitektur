@@ -3,9 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InstansiController;
 
-// halaman utama
-Route::get('/', [InstansiController::class, 'index'])->name('index');
+// Redirect root ke halaman Kementerian
+Route::get('/', function () {
+    return redirect()->route('instansi.index', ['kategori' => 'Kementerian']);
+});
 
-// data JSON untuk refresh tabel
-Route::get('/data/{kategori}', [InstansiController::class, 'data'])->name('data');
+Route::group(['prefix' => 'instansi'], function () {
+    Route::get('/', [InstansiController::class, 'index'])->name('instansi.index');
+    Route::get('/data', [InstansiController::class, 'data'])->name('instansi.data');
+});
 
