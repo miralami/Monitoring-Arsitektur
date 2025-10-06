@@ -12,46 +12,42 @@ class InstansiSeeder extends Seeder
         Instansi::truncate();
 
         // Kementerian
-        Instansi::create([
-            'kategori' => 'Kementerian',
-            'instansi' => 'Kementerian A',
-            'proses_bisnis_as_is' => 10,
-            'layanan_as_is' => 12,
-            'data_info_as_is' => 25,
-            'aplikasi_as_is' => 3,
-            'infra_as_is' => 4,
-            'keamanan_as_is' => 2,
-            'proses_bisnis_to_be' => 3,
-            'layanan_to_be' => 0,
-            'data_info_to_be' => 0,
-            'aplikasi_to_be' => 2,
-            'infra_to_be' => 0,
-            'keamanan_to_be' => 0,
-            'peta_rencana' => false,
-            'clearance' => false,
-            'reviueval' => false,
-            'tingkat_kematangan' => false,
-        ]);
-        Instansi::create([
-            'kategori' => 'Kementerian',
-            'instansi' => 'Kementerian B',
-            'proses_bisnis_as_is' => 0,
-            'layanan_as_is' => 0,
-            'data_info_as_is' => 0,
-            'aplikasi_as_is' => 0,
-            'infra_as_is' => 0,
-            'keamanan_as_is' => 0,
-            'proses_bisnis_to_be' => 0,
-            'layanan_to_be' => 0,
-            'data_info_to_be' => 0,
-            'aplikasi_to_be' => 0,
-            'infra_to_be' => 0,
-            'keamanan_to_be' => 0,
-            'peta_rencana' => false,
-            'clearance' => false,
-            'reviueval' => false,
-            'tingkat_kematangan' => false,
-        ]);
+        $kementerian = [
+            'Kementerian Dalam Negeri',
+            'Kementerian Luar Negeri',
+            'Kementerian Pertahanan',
+            'Kementerian Agama',
+            'Kementerian Hukum',
+            'Kementerian Hak Asasi Manusia',
+            'Kementerian Imigrasi dan Pemasyarakatan',
+            'Kementerian Keuangan',
+            'Kementerian Pendidikan Dasar dan Menengah',
+            'Kementerian Pendidikan Tinggi, Sains, dan Teknologi',
+            'Kementerian Kebudayaan'
+        ];
+
+        foreach ($kementerian as $k) {
+            Instansi::create([
+                'kategori' => 'Kementerian',
+                'instansi' => $k,
+                'proses_bisnis_as_is' => rand(3, 8),      // Random 3-8 proses
+                'layanan_as_is' => rand(4, 10),           // Random 4-10 layanan
+                'data_info_as_is' => rand(5, 15),         // Random 5-15 data
+                'aplikasi_as_is' => rand(2, 7),           // Random 2-7 aplikasi
+                'infra_as_is' => rand(1, 5),              // Random 1-5 infrastruktur
+                'keamanan_as_is' => rand(1, 4),           // Random 1-4 keamanan
+                'proses_bisnis_to_be' => rand(1, 4),      // Random 1-4 proses to-be
+                'layanan_to_be' => rand(1, 3),            // Random 1-3 layanan to-be
+                'data_info_to_be' => rand(2, 5),          // Random 2-5 data to-be
+                'aplikasi_to_be' => rand(1, 3),           // Random 1-3 aplikasi to-be
+                'infra_to_be' => rand(0, 2),              // Random 0-2 infrastruktur to-be
+                'keamanan_to_be' => rand(0, 2),           // Random 0-2 keamanan to-be
+                'peta_rencana' => false,       // Random boolean
+                'clearance' => false,          // Random boolean
+                'reviueval' => false,          // Random boolean
+                'tingkat_kematangan' => false, // Random boolean
+            ]);
+        }
 
         // LPNK
         Instansi::create([
