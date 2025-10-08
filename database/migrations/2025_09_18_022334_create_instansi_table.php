@@ -14,8 +14,20 @@ return new class extends Migration
     {
         Schema::create('instansi', function (Blueprint $table) {
             $table->id();
-            $table->string('kategori'); // contoh: Kementerian, LPNK, dll
             $table->string('instansi');
+
+            $table->foreignId('id_kategori_instansi')->constrained('kategori_instansi')->onDelete('cascade');
+            $table->foreignId('id_daerah')->constrained('daerah')->onDelete('cascade');
+            $table->string('guid_instansi')->nullable();
+            $table->string('guid_probis')->nullable();
+            $table->string('guid_layanan')->nullable();
+            $table->string('guid_datin')->nullable();
+            $table->string('guid_aplikasi')->nullable();
+            $table->string('guid_infra')->nullable();
+            $table->string('guid_keamanan')->nullable();
+            $table->string('guid_takel')->nullable();
+            $table->string('guid_manajemen')->nullable();
+
             $table->integer('proses_bisnis_as_is')->default(0);
             $table->integer('layanan_as_is')->default(0);
             $table->integer('data_info_as_is')->default(0);
